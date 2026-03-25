@@ -9,14 +9,14 @@ import lombok.Setter;
 @Getter
 @Setter
 public class UserResponse {
-    @NotBlank(message = "Por favor digite o seu nome")
+    @NotBlank
     @Size(max = 255)
     private String nome;
-    @Email(message = "por favor digite o seu e-mail corretamente")
-    @NotBlank(message = "Por favor digite o seu e-mail")
+    @Email
+    @NotBlank
     @Size(max = 255)
     private String email;
-    @NotBlank(message = "Por favor digite a sua password")
+    @NotBlank
     @Size(max = 255)
     private String password;
 
