@@ -4,7 +4,9 @@ import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.UpdateTimestamp;
 
+import java.time.OffsetDateTime;
 import java.util.UUID;
 
 @Getter
@@ -24,5 +26,10 @@ public class Pet {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+    @Column(name = "created_at")
+    private OffsetDateTime createdAt;
+    @Column(name = "updated_at")
+    @UpdateTimestamp
+    private OffsetDateTime updatedAt;
 
 }
