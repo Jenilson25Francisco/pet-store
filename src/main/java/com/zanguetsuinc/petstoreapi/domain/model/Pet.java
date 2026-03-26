@@ -22,6 +22,8 @@ public class Pet {
     private String raca;
     private String cor;
     private String sexo;
+    @Column(name = "image_url")
+    private String imageUrl;
     private int idade;
     @ManyToOne
     @JoinColumn(name = "user_id")
