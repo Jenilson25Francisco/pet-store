@@ -1,4 +1,4 @@
-package com.zanguetsuinc.petstoreapi.api.response;
+package com.zanguetsuinc.petstoreapi.api.request;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -8,7 +8,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class UserResponse {
+public class UserRequest {
     @NotBlank
     @Size(max = 255)
     private String nome;
@@ -19,5 +19,7 @@ public class UserResponse {
     @NotBlank
     @Size(max = 255)
     private String password;
+    @NotBlank
+    private String imageUrl;
 
 }
