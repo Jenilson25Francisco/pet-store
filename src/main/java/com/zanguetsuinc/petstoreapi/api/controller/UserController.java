@@ -2,7 +2,7 @@ package com.zanguetsuinc.petstoreapi.api.controller;
 
 import com.zanguetsuinc.petstoreapi.api.assembler.UserAssembler;
 import com.zanguetsuinc.petstoreapi.api.dto.UserDto;
-import com.zanguetsuinc.petstoreapi.api.response.UserResponse;
+import com.zanguetsuinc.petstoreapi.api.request.UserRequest;
 import com.zanguetsuinc.petstoreapi.domain.model.User;
 import com.zanguetsuinc.petstoreapi.domain.repository.UserRepository;
 import com.zanguetsuinc.petstoreapi.domain.service.CreateUserService;
@@ -38,8 +38,8 @@ public class UserController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public UserDto criar(@Valid @RequestBody UserResponse userResponse){
-        User newUser = userAssembler.toResponse(userResponse);
+    public UserDto criar(@Valid @RequestBody UserRequest userRequest){
+        User newUser = userAssembler.toResponse(userRequest);
         User saveUser = createUserService.create(newUser);
 
         return userAssembler.toDto(saveUser);
