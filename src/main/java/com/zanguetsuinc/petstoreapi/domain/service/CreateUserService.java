@@ -16,7 +16,7 @@ public class CreateUserService {
 
     private final UserRepository userRepository;
 
-    public User busccar(UUID userId){
+    public User buscar(UUID userId){
         return userRepository.findById(userId)
                 .orElseThrow(() -> new NegocioException("Usario não encontrado"));
     }
