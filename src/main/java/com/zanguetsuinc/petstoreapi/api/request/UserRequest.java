@@ -19,7 +19,5 @@ public class UserRequest {
     @NotBlank
     @Size(max = 255)
     private String password;
-    @NotBlank
-    private String imageUrl;
 
 }
