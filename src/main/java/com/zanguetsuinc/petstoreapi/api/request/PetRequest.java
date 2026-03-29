@@ -25,6 +25,8 @@ public class PetRequest {
     @NotBlank
     @Size(max = 255)
     private String imageUrl;
-    private UserIdRequest userIdRequest;
+    @Valid
+    @NotNull
+    private UserIdRequest user;
 
 }
