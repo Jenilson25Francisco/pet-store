@@ -9,6 +9,8 @@ import java.util.UUID;
 @Getter
 @Setter
 public class UserIdRequest {
+
+    @NotNull
     private UUID id;
 
 }
