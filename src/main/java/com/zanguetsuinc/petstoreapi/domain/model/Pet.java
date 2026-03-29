@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
@@ -25,6 +26,7 @@ public class Pet {
     @Column(name = "image_url")
     private String imageUrl;
     private int idade;
+    private BigDecimal preco;
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
